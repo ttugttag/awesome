@@ -9,7 +9,7 @@ ENVIRONMENT = env('ENVIRONMENT', default='production')
 
 # Feature Toggle
 DEVELOPER = env('DEVELOPER', default='')
-# STAGING = env('STAGING', default=False)
+STAGING = env('STAGING', default=False)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -130,7 +130,7 @@ DATABASES = {
     }
 }
 
-POSTGRES_LOCALLY = True
+POSTGRES_LOCALLY = False
 if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
     # for extenal database 설정    
     DATABASES['default'] = dj_database_url.parse(env("DATABASE_URL"))
