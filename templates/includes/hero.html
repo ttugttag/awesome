@@ -4,7 +4,9 @@
         <h1 class="font1 text-6xl title-fadein">Deployment Photos & Captions</h1>
         <p class="text-lg font-bold mb-5">Share your favorite Photos from Flickr and add a great caption</p>
         {% if not user.is_authenticated %}
+            {{ feature_herobutton }} aaa
             {% if feature_herobutton %}
+                {{ feature_herobutton }}
                 <a style="background-color:#06B6D4;"
                 class="button" href="{% url 'account_signup' %}">Create Account</a>
             {% else %}
