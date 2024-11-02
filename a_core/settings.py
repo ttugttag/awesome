@@ -180,28 +180,6 @@ STATIC_ROOT=BASE_DIR / 'staticfiles'
 # for media
 MEDIA_URL = 'media/'
 
-# # for media server
-# if ENVIRONMENT == "production" or POSTGRES_LOCALLY == True:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-#             },
-#         "staticfiles": {
-#             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-#             },
-#     }
-# else:
-#     MEDIA_ROOT = BASE_DIR / 'media'
-
-# CLOUDINARY_STORAGE = {
-#     # 'CLOUD_NAME': 'your_cloud_name',
-#     'CLOUD_NAME': env('CLOUD_NAME'),
-#     # 'API_KEY': 'your_api_key',
-#     'API_KEY': env('API_KEY'),
-#     # 'API_SECRET': 'your_api_secret',
-#     'API_SECRET': env('API_SECRET'),    
-# }
-
 # for media server
 if ENVIRONMENT == "production" or POSTGRES_LOCALLY == True:
     STORAGES = {
