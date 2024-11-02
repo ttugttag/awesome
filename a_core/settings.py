@@ -211,13 +211,10 @@ if ENVIRONMENT == "production" or POSTGRES_LOCALLY == True:
         "staticfiles": {
             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
             },
-    },
+    }
     CLOUDINARY_STORAGE = {
-        # 'CLOUD_NAME': 'your_cloud_name',
         'CLOUD_NAME': env('CLOUD_NAME'),
-        # 'API_KEY': 'your_api_key',
         'API_KEY': env('API_KEY'),
-        # 'API_SECRET': 'your_api_secret',
         'API_SECRET': env('API_SECRET'),    
     }    
 else:
