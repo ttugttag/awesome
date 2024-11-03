@@ -68,7 +68,8 @@ INSTALLED_APPS = [
         
     'a_posts',
     'a_users',
-    'a_features',    
+    'a_features',
+    'a_landingpages',   
 ]
 
 # for django-allauth
@@ -87,7 +88,9 @@ MIDDLEWARE = [
     # django_htmx
     "django_htmx.middleware.HtmxMiddleware",
     # whitenoise
-    "whitenoise.middleware.WhiteNoiseMiddleware",         
+    "whitenoise.middleware.WhiteNoiseMiddleware", 
+    # a_landingpages
+    'a_landingpages.middleware.landingpage_middleware',            
 ]
 
 ROOT_URLCONF = 'a_core.urls'
